@@ -1,0 +1,12 @@
+> Hola, soy el bot de **Orbitburó en Español** y ¡estoy aquí para guiarte! <:chuu:716783609763069962>
+
+Escribe los siguientes comandos para pedir más información:
+
+**&ayuda:** ¡estás aquí!
+**&comandos:** lista de comandos disponibles para interactuar conmigo
+**&canales:** lista de todos los canales y sus descripciones
+
+Puedes usarme en todos los canales abiertos, excepto en los canales específicos para otros bots: <#774806561465565194>, <#774730648774246431> y <#731919940533223514>.
+
+Si presento problemas o necesitas más ayuda, menciona o envía un mensaje a @lona
+:coffee: Si te gusta este bot, considera donar un ko-fi a la creadora: https://ko-fi.com/lona9 

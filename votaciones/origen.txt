@@ -1,0 +1,5 @@
+¿Cómo llegaste al server?
+Reacciona para elegir entre las siguientes opciones:
+
+:speaking_head: : alguien me recomendó el servidor
+:bird: : por interacciones en twitter (ver RT, menciones)

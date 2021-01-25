@@ -1,0 +1,12 @@
+Hola, soy el bot de **Orbitburó en Español** y ¡estoy aquí para guiarte! <:chuu:716783609763069962>
+
+Vi que tenías dudas sobre cómo usarme, aquí te dejo algunos comandos que te podrían servir. Para utilizar cualquier comando, solo debes escribir la palabra (con & adelante siempre). 
+
+Intenta con los siguientes para ver más información:
+
+**&comandos:** lista de comandos disponibles para interactuar conmigo
+**&canales:** lista de todos los canales y sus descripciones
+
+Recuerda que puedes utilizarme en todos los canales abiertos (excepto los específicos para otros bots), o en esta misma conversación.
+
+Si presento problemas o necesitas más ayuda, menciona o envía un mensaje a @lona para que te oriente sobre cómo usarme <:vivi:716796644263329844>

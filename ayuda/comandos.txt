@@ -1,0 +1,22 @@
+<:untercio:716783756190679130> Estos son los comandos que puedes utilizar y sus funciones:
+
+> **Servidor**
+**&canales**: Resumen de los canales del servidor.
+**&siguiente**: Detalles de la próxima actividad a realizar.
+**&ultima**: Detalles de la última actividad realizada.
+**&drive**: Link para la carpeta de Drive del servidor.
+**&playlist**: Link para la playlist en Spotify de Orbitburó en español.
+**&invitacion**: Envía un DM con un link de invitación al server que caduca en 24 horas.
+
+> **Al azar:**
+**&cita**: Citas de autores famosos al azar.
+**&dato**: Datos curiosos de izquierda al azar. 
+**&bobesponja**: Citas de Bob Esponja al azar.
+**&kpop**: Canción de kpop al azar.
+**&cancion**: Canción en Spotify de la playlist de OrbitBuró en español al azar
+**&recomendacion:** Texto de nuestra biblioteca en Drive al azar
+
+> **Misceláneos:**
+**&hora**: Hora actual en distintas zonas horarias.
+**&suerte**: Mira tu futuro haciendo una pregunta luego del comando (ejemplo: &suerte llegaremos al socialismo este año?)
+**&opinion**: Pregúntame tu opinión de alguien (ejemplo: &opinion vivi from loona)

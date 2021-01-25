@@ -1,0 +1,4 @@
+Puedes utilizar las siguientes reacciones si deseas **agregarte** un rol nuevo:
+
+:bug: : para agregarte el rol de <@&716080902463029250>
+:butterfly: : para agregarte el rol de <@&716080939268177972>

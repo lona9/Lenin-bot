@@ -1,0 +1,6 @@
+¿Te gustó la implementación del bot?
+
+:tada: : me encanta!
+:neutral_face: : me da lo mismo
+:sob: : lo odio!
+:moyai: : no entiendo cómo usarlo
