@@ -24,14 +24,14 @@ async def on_ready():
 @bot.command()
 async def texto(ctx, *args):
   channel = bot.get_channel(801276868027482164)
-  with open('roles.txt') as f:
+  with open('/home/runner/lenin/roles/roles.txt') as f:
     head = f.read()
     await channel.send(head)
 
 @bot.command()
 async def rolesedad(ctx):
   channel = bot.get_channel(801276868027482164)
-  with open('roles1.txt') as f:
+  with open('/home/runner/lenin/roles/roles1.txt') as f:
     addedad = f.read()
     edad = await channel.send(addedad)
     reactions = ['🐛', '🦋']
@@ -41,7 +41,7 @@ async def rolesedad(ctx):
 @bot.command()
 async def rolespron(ctx):
   channel = bot.get_channel(801276868027482164)
-  with open('roles2.txt') as f:
+  with open('/home/runner/lenin/roles/roles2.txt') as f:
     addpron = f.read()
     pronouns = await channel.send(addpron)
     reactions = ['🥝', '🍓', '🍉']
@@ -51,7 +51,7 @@ async def rolespron(ctx):
 @bot.command()
 async def delroles(ctx):
   channel = bot.get_channel(801276868027482164)
-  with open('roles3.txt') as f:
+  with open('/home/runner/lenin/roles/roles3.txt') as f:
     remroles = f.read()
     pronouns = await channel.send(remroles)
     reactions = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣']
