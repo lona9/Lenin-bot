@@ -307,7 +307,7 @@ async def on_message(message):
   msg = message.content
 
 #EASTER EGGS
-  if 'leamos' in msg.lower() or 'leido' in msg.lower() or 'lee' in msg.lower() or 'leiste' in msg.lower() or 'leyó' in msg.lower() or 'lei' in msg.lower():
+  if 'leamos' in msg.lower() or 'leido' in msg.lower() or 'lee' in msg.lower() or 'leiste' in msg.lower() or 'leyó' in msg.lower() or 'lei' in msg.lower() or 'leyendo' in msg.lower():
     await message.channel.send('¿Alguien dijo leer? ¡Recuerda leer el texto de la próxima actividad!')
 
   if 'trotsk' in msg.lower() or 'trosk' in msg.lower():
@@ -331,6 +331,15 @@ async def on_message(message):
 
   if 'blackpink' in msg.lower():
     await message.channel.send('RS1 WHEN')
+
+  reprmusica = bot.get_channel(731919940533223514)
+  secgen = bot.get_channel(716135897476628521)
+
+  if msg.startswith('!'):
+    if message.channel != reprmusica or message.channel != secgen:
+      await message.channel.send('Los comandos del bot de música deben ser enviados en el canal de <#731919940533223514>.')
+    else:
+      return
 
   await bot.process_commands(message)
 
