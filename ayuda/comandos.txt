@@ -7,6 +7,7 @@
 **&drive**: Link para la carpeta de Drive del servidor.
 **&playlist**: Link para la playlist en Spotify de Orbitburó en español.
 **&invitacion**: Envía un DM con un link de invitación al server que caduca en 24 horas.
+**&redes**: Links de las redes sociales del servidor.
 
 > **Al azar:**
 **&cita**: Citas de autores famosos al azar.

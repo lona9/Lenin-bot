@@ -19,7 +19,14 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-
+    
+@bot.command()
+async def sorteo(ctx):
+  channel = bot.get_channel(803422734033879050)
+  with open('sorteo.txt') as f:
+    sorteo = f.read()
+    await channel.send(sorteo)
+  
 #CANAL DE ROLES
 @bot.command()
 async def texto(ctx, *args):
@@ -173,6 +180,11 @@ async def drive(ctx):
 async def playlist(ctx):
   playlist = ('¿Buscas el link de la playlist de Spotify? ¡Acá está!:', '\n', 'https://open.spotify.com/playlist/3ZcCDnPcEucCnZWNe1Yjcq?si=0tIICg21QlGf-AwWlNrr4w')
   await ctx.channel.send("".join(playlist))
+  
+@bot.command()
+async def redes(ctx):
+  await ctx.channel.send('Síguenos en nuestras redes sociales:\nTwitter: https://www.twitter.com/OrbitburoES\nInstagram: https://www.instagram.com/OrbitburoES')
+  
 
 #ENVIAR DM CON INVITACIÓN ÚNICA
 @bot.command(name='invitacion',pass_context=True)
