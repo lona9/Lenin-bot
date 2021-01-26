@@ -185,11 +185,9 @@ async def playlist(ctx):
 async def redes(ctx):
   await ctx.channel.send('Síguenos en nuestras redes sociales:\nTwitter: https://www.twitter.com/OrbitburoES\nInstagram: https://www.instagram.com/OrbitburoES')
   
-
-#ENVIAR DM CON INVITACIÓN ÚNICA
 @bot.command(name='invitacion',pass_context=True)
 async def invitacion(ctx, *argument):
-    invitelink = await ctx.channel.create_invite(max_age=86400,unique=True)
+    invitelink = await ctx.channel.create_invite(max_age=86400,unique=True) #ENVIAR DM CON INVITACIÓN ÚNICA
     await ctx.author.send('¡Aquí está el link de invitación al servidor que pediste! Debes usarlo en las siguientes 24 horas antes de que expire. ')
     await ctx.author.send(invitelink)
   
@@ -281,7 +279,7 @@ async def opinion(ctx, *args):
 #   await channel.connect()
 
       
-#RELOJITO
+#RELOJ
 @bot.command()
 async def hora(ctx):
 # TIMEZONES
@@ -310,7 +308,7 @@ async def sinrol(ctx):
   channel = bot.get_channel(716367363968073749)
   await channel.send('<@&774766632119173131> les recordamos que deben leer las reglas de la comunidad en <#716068304162258954> y luego poner sus datos en el canal <#716076107685822535> para poder acceder al servidor')
 
-#TRIGGERS 
+#EASTER EGGS
 @bot.event
 async def on_message(message):
   if message.author == bot.user:
@@ -318,7 +316,6 @@ async def on_message(message):
 
   msg = message.content
 
-#EASTER EGGS
   if 'leamos' in msg.lower() or 'leido' in msg.lower() or 'lee' in msg.lower() or 'leiste' in msg.lower() or 'leyó' in msg.lower() or 'lei' in msg.lower() or 'leyendo' in msg.lower():
     await message.channel.send('¿Alguien dijo leer? ¡Recuerda leer el texto de la próxima actividad!')
 
