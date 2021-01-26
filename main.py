@@ -26,6 +26,18 @@ async def sorteo(ctx):
   with open('sorteo.txt') as f:
     sorteo = f.read()
     await channel.send(sorteo)
+
+@bot.command()
+async def sorteo1(ctx):
+  with open('sorteo1.txt') as f:
+    sorteo = f.read()
+    await ctx.channel.send(sorteo)
+
+@bot.command()
+async def actividad(ctx):
+  with open('actividad.txt') as f:
+    actividad = f.read()
+    await ctx.channel.send(actividad)
   
 #CANAL DE ROLES
 @bot.command()
