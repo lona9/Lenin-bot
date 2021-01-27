@@ -3,3 +3,7 @@ Reacciona para elegir entre las siguientes opciones:
 
 :speaking_head: : alguien me recomendó el servidor
 :bird: : por interacciones en twitter (ver RT, menciones)
+
+Resultados:
+recomendación: 8
+twitter: 18

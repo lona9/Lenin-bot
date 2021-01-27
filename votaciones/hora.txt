@@ -1,0 +1,13 @@
+¿Qué te parece el cambio de hora de las actividades?
+
+:partying_face: : Excelente, ahora sí puedo asistir (y antes no podía).
+
+:grin: : Muy bueno, lo prefiero al anterior (15:00).
+
+:zany_face: : Me da igual, puedo asistir en ambos horarios.
+
+:sob: : Malo, ahora no puedo asistir en ese horario :(
+  
+:yawning_face: :  Me es indiferente, ninguno de los dos horarios me permite asistir.
+
+:flushed: : Aún no me atrevo a conectarme a las actividades.

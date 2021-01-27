@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Blackpink - The Album'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Red Velvet - Automatic'))
     
 @bot.command()
 async def sorteo(ctx):
@@ -148,12 +148,12 @@ async def on_raw_reaction_add(payload):
 
 #CANAL DE VOTACIONES
 @bot.command()
-async def origen(ctx):
+async def ophora(ctx):
   channel = bot.get_channel(801820643300474940)
-  with open('/home/runner/lenin/votaciones/origen.txt') as f:
-    origen = f.read()
-    msg = await channel.send(origen)
-    reactions = ['🗣️', '🐦']
+  with open('/home/runner/lenin/votaciones/hora.txt') as f:
+    hora = f.read()
+    msg = await channel.send(hora)
+    reactions = ['🥳', '😄', '🤪', '😭', '🥱', '😳']
     for i in reactions:
       await msg.add_reaction(i)
 
