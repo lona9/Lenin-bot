@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='The Perfect Red Velvet'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Blackpink - The Album'))
     
 @bot.command()
 async def sorteo(ctx):
@@ -167,12 +167,6 @@ async def opbot(ctx):
     for i in reactions:
       await msg.add_reaction(i)
 
-# @bot.command()
-# async def spam(ctx):
-#   ids = (523977713019781146, 412652539927068686, 285844726689562624, 442720523802378252, 485054727755792410)
-#   for i in ids:
-#     user = await bot.fetch_user(i)
-#     await user.send('la lona dice hola y que funcionó lo que hizo')
 
 #COMANDOS DE AYUDA
 @bot.command()
@@ -288,16 +282,6 @@ async def opinion(ctx, *args):
 # @bot.command()
 # async def conectargral(ctx):
 #   channel = await bot.fetch_channel(716064320550600778)
-#   await channel.connect()
-
-# @bot.command()
-# async def conectarmusica(ctx):
-#   channel = await bot.fetch_channel(732655758377877535)
-#   await channel.connect()
-
-# @bot.command()
-# async def conectarsecgen(ctx):
-#   channel = await bot.fetch_channel(717191002871562241)
 #   await channel.connect()
 
       
