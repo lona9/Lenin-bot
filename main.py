@@ -349,12 +349,15 @@ async def on_message(message):
 
   reprmusica = bot.get_channel(731919940533223514)
   secgen = bot.get_channel(716135897476628521)
+  pruebot = bot.get_channel(800131110989463592)
 
-  if msg.startswith('!'):
-    if message.channel != reprmusica or message.channel != secgen:
-      await message.channel.send('Los comandos del bot de música deben ser enviados en el canal de <#731919940533223514>.')
-    else:
+  if msg.startswith('!p'):
+    if message.channel == secgen:
       return
+    elif message.channel == pruebot:
+      return
+    elif message.channel != reprmusica:
+      await message.channel.send('Los comandos del bot de música deben ser enviados en el canal de <#731919940533223514>.')
 
   await bot.process_commands(message)
 
