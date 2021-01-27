@@ -19,6 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='The Perfect Red Velvet'))
     
 @bot.command()
 async def sorteo(ctx):
@@ -43,7 +44,7 @@ async def actividad(ctx):
 # async def actividaddm(ctx):
 #   with open('actividad.txt') as f:
 #     actividad = f.read()
-#     ids = (285844726689562624, 398282315937218560, 412652539927068686, 539210953531588623, 617124459693867038, 689609468211757121, 774350361032130640, 801001482668474418, 485054727755792410, 754882644071940131)
+#     ids = (285844726689562624, 398282315937218560, 412652539927068686, 539210953531588623, 617124459693867038, 689609468211757121, 774350361032130640, 801001482668474418, 485054727755792410, 754882644071940131, 703298935514464296)
 #     for i in ids:
 #       user = await bot.fetch_user(i)
 #       await user.send(actividad)
