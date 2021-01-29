@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Red Velvet - Automatic'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Vivi - Everyday I Love You'))
     
 @bot.command()
 async def sorteo(ctx):
@@ -51,7 +51,7 @@ async def actividad(ctx):
   
 #CANAL DE ROLES
 @bot.command()
-async def texto(ctx, *args):
+async def texto(ctx):
   channel = bot.get_channel(801276868027482164)
   with open('/home/runner/lenin/roles/roles.txt') as f:
     head = f.read()
