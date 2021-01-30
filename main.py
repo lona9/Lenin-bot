@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Vivi - Everyday I Love You'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='LOONA 1/3 - Sonatine'))
     
 @bot.command()
 async def sorteo(ctx):
