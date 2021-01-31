@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='LOONA 1/3 - Sonatine'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='SNSD - Reflection'))
     
 @bot.command()
 async def sorteo(ctx):
@@ -27,6 +27,20 @@ async def sorteo(ctx):
   with open('sorteo.txt') as f:
     sorteo = f.read()
     await channel.send(sorteo)
+
+@bot.command()
+async def sorteolibro(ctx):  
+  channel = bot.get_channel(800131110989463592)
+  participantes = ['<@693607300925096110>', '<@664633286529646602', '<@378708063227609118>', '<@695064502969827419>', '<@704707761170153493>', '<@630264485004836874', '<@701942078904598629>', '<@662482574018609152>', '<@780956983028219935>', '<@688208318694555789>', '<@698313832581431346>', '<@691094950888341574>', '<@632791029489205250>', '<@692187168541507586>', '<@611427362218835968>', '<@728070188154617886>', '<@289575858723618816>', '<@696755737988431894>', '<@479043300758781986>', '<@690379093388034069>', '<@703298935514464296>', '<@729139153022746624>']
+  await channel.send('La persona ganadora del libro "Marx: Ciencia y revolución" es...')
+  await channel.send('...')
+  await channel.send('...')
+  await channel.send('...')
+  await channel.send('...')
+  await channel.send('...')
+  await channel.send('...')
+  await channel.send('...')
+  await channel.send('{}!!!'.format(random.choice(participantes)))
 
 @bot.command()
 async def sorteo1(ctx):
