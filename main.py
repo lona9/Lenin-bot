@@ -19,40 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='SNSD - Reflection'))
-    
-@bot.command()
-async def sorteo(ctx):
-  channel = bot.get_channel(803422734033879050)
-  with open('sorteo.txt') as f:
-    sorteo = f.read()
-    await channel.send(sorteo)
-
-@bot.command()
-async def sorteolibro(ctx):  
-  channel = bot.get_channel(800131110989463592)
-  participantes = ['<@693607300925096110>', '<@664633286529646602>', '<@378708063227609118>', '<@695064502969827419>', '<@704707761170153493>', '<@630264485004836874>', '<@701942078904598629>', '<@662482574018609152>', '<@780956983028219935>', '<@688208318694555789>', '<@698313832581431346>', '<@691094950888341574>', '<@632791029489205250>', '<@692187168541507586>', '<@611427362218835968>', '<@728070188154617886>', '<@289575858723618816>', '<@696755737988431894>', '<@479043300758781986>', '<@690379093388034069>', '<@703298935514464296>', '<@729139153022746624>', '<@754882644071940131>']
-  await channel.send('La persona ganadora del libro "Marx: Ciencia y revolución" es...')
-  await channel.send('...')
-  await channel.send('...')
-  await channel.send('...')
-  await channel.send('...')
-  await channel.send('...')
-  await channel.send('...')
-  await channel.send('...')
-  await channel.send('{}!!!'.format(random.choice(participantes)))
-
-@bot.command()
-async def sorteo1(ctx):
-  with open('sorteo1.txt') as f:
-    sorteo = f.read()
-    await ctx.channel.send(sorteo)
-
-@bot.command()
-async def lista(ctx, arg):
-  f = open('participantes.txt', 'a')
-  f.write(", '<@{}>'".format(arg))
-  await ctx.channel.send('agregado!')
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='T-ara - Number 9'))
 
 @bot.command()
 async def actividad(ctx):
@@ -303,7 +270,6 @@ async def opinion(ctx, *args):
 # async def conectargral(ctx):
 #   channel = await bot.fetch_channel(716064320550600778)
 #   await channel.connect()
-
       
 #RELOJ
 @bot.command()
@@ -365,7 +331,7 @@ async def on_message(message):
     await message.channel.send('<:yeojin2:716798849464795260>')
 
   if 'blackpink' in msg.lower():
-    await message.channel.send('RS1 WHEN')
+    await message.channel.send('RS1 IS COMING')
 
   reprmusica = bot.get_channel(731919940533223514)
   secgen = bot.get_channel(716135897476628521)
