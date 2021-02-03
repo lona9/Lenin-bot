@@ -1,3 +1,4 @@
+#MULTIPLE DMS
 @bot.command()
 async def actividaddm(ctx):
   with open('actividad.txt') as f:
@@ -6,6 +7,7 @@ async def actividaddm(ctx):
     for i in ids:
       user = await bot.fetch_user(i)
       await user.send(actividad)
+
 
 CANAL DE VOZ
  @bot.command()

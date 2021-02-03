@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='T-ara - Number 9'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='TWICE - Cry for Me'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -172,7 +172,7 @@ async def playlist(ctx):
 async def redes(ctx):
   await ctx.channel.send('Síguenos en nuestras redes sociales:\nTwitter: https://www.twitter.com/OrbitburoES\nInstagram: https://www.instagram.com/OrbitburoES')
   
-@bot.command(name='invitacion',pass_context=True)
+@bot.command(name='invitacion')
 async def invitacion(ctx, *argument):
     invitelink = await ctx.channel.create_invite(max_age=86400,unique=True)
     await ctx.author.send('¡Aquí está el link de invitación al servidor que pediste! Debes usarlo en las siguientes 24 horas antes de que expire. ')
@@ -324,6 +324,24 @@ async def on_message(message):
 
   await bot.process_commands(message)
 
+@bot.command()
+async def hello(ctx): 
+  channel = ctx.channel
+  author = ctx.message.author
+  await channel.send('¿Cuál es el mejor programa animado?')
+
+  def check(m):
+    return m.channel == channel
+  
+  msg = await bot.wait_for('message', check=check)
+
+  if msg.content.lower() == 'bob esponja':
+    answer = '¡Correcto!'
+  else:
+    answer = 'Incorrecto'
+
+  await channel.send(answer)
+  
 keep_alive()
 
 bot.run(DISCORD_TOKEN)
