@@ -21,21 +21,6 @@ async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
   await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='T-ara - Number 9'))
 
-@bot.command()
-async def actividad(ctx):
-  with open('actividad.txt') as f:
-    actividad = f.read()
-    await ctx.channel.send(actividad)
-
-# @bot.command()
-# async def actividaddm(ctx):
-#   with open('actividad.txt') as f:
-#     actividad = f.read()
-#     ids = (285844726689562624, 398282315937218560, 412652539927068686, 539210953531588623, 617124459693867038, 689609468211757121, 774350361032130640, 801001482668474418, 485054727755792410, 754882644071940131, 703298935514464296)
-#     for i in ids:
-#       user = await bot.fetch_user(i)
-#       await user.send(actividad)
-  
 #CANAL DE ROLES
 @bot.command()
 async def texto(ctx):
@@ -154,7 +139,6 @@ async def opbot(ctx):
     for i in reactions:
       await msg.add_reaction(i)
 
-
 #COMANDOS DE AYUDA
 @bot.command()
 async def ayuda(ctx):
@@ -190,11 +174,10 @@ async def redes(ctx):
   
 @bot.command(name='invitacion',pass_context=True)
 async def invitacion(ctx, *argument):
-    invitelink = await ctx.channel.create_invite(max_age=86400,unique=True) #ENVIAR DM CON INVITACIÓN ÚNICA
+    invitelink = await ctx.channel.create_invite(max_age=86400,unique=True)
     await ctx.author.send('¡Aquí está el link de invitación al servidor que pediste! Debes usarlo en las siguientes 24 horas antes de que expire. ')
     await ctx.author.send(invitelink)
   
-
 # #COMANDOS RANDOM
 
 @bot.command()
@@ -264,12 +247,6 @@ async def opinion(ctx, *args):
       await ctx.channel.send('¡Debes agregar algo para poder darte mi opinión!')
     else:
       await ctx.channel.send(random.choice(opinion))
-
-#CANAL DE VOZ
-# @bot.command()
-# async def conectargral(ctx):
-#   channel = await bot.fetch_channel(716064320550600778)
-#   await channel.connect()
       
 #RELOJ
 @bot.command()

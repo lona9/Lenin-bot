@@ -1,0 +1,14 @@
+@bot.command()
+async def actividaddm(ctx):
+  with open('actividad.txt') as f:
+    actividad = f.read()
+    ids = (285844726689562624, 398282315937218560, 412652539927068686, 539210953531588623, 617124459693867038, 689609468211757121, 774350361032130640, 801001482668474418, 485054727755792410, 754882644071940131, 703298935514464296)
+    for i in ids:
+      user = await bot.fetch_user(i)
+      await user.send(actividad)
+
+CANAL DE VOZ
+ @bot.command()
+ async def conectargral(ctx):
+   channel = await bot.fetch_channel(716064320550600778)
+   await channel.connect()
