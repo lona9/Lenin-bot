@@ -1,16 +1,25 @@
-#MULTIPLE DMS
-@bot.command()
-async def actividaddm(ctx):
-  with open('actividad.txt') as f:
-    actividad = f.read()
-    ids = (285844726689562624, 398282315937218560, 412652539927068686, 539210953531588623, 617124459693867038, 689609468211757121, 774350361032130640, 801001482668474418, 485054727755792410, 754882644071940131, 703298935514464296)
-    for i in ids:
-      user = await bot.fetch_user(i)
-      await user.send(actividad)
-
-
 CANAL DE VOZ
  @bot.command()
  async def conectargral(ctx):
    channel = await bot.fetch_channel(716064320550600778)
    await channel.connect()
+
+
+RESPUESTA CON INPUT
+@bot.command()
+async def hello(ctx): 
+  channel = ctx.channel
+  author = ctx.message.author
+  await channel.send('¿Cuál es el mejor programa animado?')
+
+  def check(m):
+    return m.channel == channel
+  
+  msg = await bot.wait_for('message', check=check)
+
+  if msg.content.lower() == 'bob esponja':
+    answer = '¡Correcto!'
+  else:
+    answer = 'Incorrecto'
+
+  await channel.send(answer)

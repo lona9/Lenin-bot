@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='TWICE - Cry for Me'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Rosé - Gone'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -117,6 +117,13 @@ async def on_raw_reaction_add(payload):
   if payload.channel_id == 801276868027482164:
     if payload.emoji.name =='🛎️':
       await lona.send('{} quiere recibir notificaciones'.format(user))
+      f = open('/home/runner/lenin/roles/notificaciones-nombre.txt', 'a')
+      f.write(", '<@{}>'".format(user, ', '))
+      f.close()
+      f = open('/home/runner/lenin/roles/notificaciones-id.txt', 'a')
+      newuser = ', ' + str(user.id)
+      f.write(newuser)
+      f.close()
 
 #CANAL DE VOTACIONES
 @bot.command()
@@ -138,6 +145,16 @@ async def opbot(ctx):
     reactions = ['🎉', '😐', '😭', '🗿']
     for i in reactions:
       await msg.add_reaction(i)
+
+#DM rol de notificaciones
+
+@bot.command()
+async def notificaciones(ctx):
+  with open('/home/runner/lenin/roles/notificaciones-id.txt') as f:
+    users = f.read().split(', ')
+    for i in users:
+      user = await bot.fetch_user(i)
+      await user.send() #agregar mensaje
 
 #COMANDOS DE AYUDA
 @bot.command()
