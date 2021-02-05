@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Rosé - Gone'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Seulgi - Uncover'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -146,15 +146,24 @@ async def opbot(ctx):
     for i in reactions:
       await msg.add_reaction(i)
 
-#DM rol de notificaciones
+#ACTIVIDADES
+@bot.command()
+async def actividad(ctx):
+  with open('actividad.txt') as f:
+    text = f.read()
+    await ctx.channel.send(text)
+
+#DM ROL DE NOTIFICACIONES
 
 @bot.command()
 async def notificaciones(ctx):
   with open('/home/runner/lenin/roles/notificaciones-id.txt') as f:
     users = f.read().split(', ')
     for i in users:
-      user = await bot.fetch_user(i)
-      await user.send() #agregar mensaje
+      with open('actividaddm.txt') as f:
+        dm = f.read()
+        user = await bot.fetch_user(i)
+        await user.send(dm) #agregar mensaje
 
 #COMANDOS DE AYUDA
 @bot.command()
@@ -340,24 +349,6 @@ async def on_message(message):
       await message.channel.send('Los comandos del bot de música deben ser enviados en el canal de <#731919940533223514>.')
 
   await bot.process_commands(message)
-
-@bot.command()
-async def hello(ctx): 
-  channel = ctx.channel
-  author = ctx.message.author
-  await channel.send('¿Cuál es el mejor programa animado?')
-
-  def check(m):
-    return m.channel == channel
-  
-  msg = await bot.wait_for('message', check=check)
-
-  if msg.content.lower() == 'bob esponja':
-    answer = '¡Correcto!'
-  else:
-    answer = 'Incorrecto'
-
-  await channel.send(answer)
   
 keep_alive()
 
