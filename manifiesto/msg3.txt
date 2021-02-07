@@ -1,0 +1,9 @@
+7. Mantén las conversaciones en sus canales respectivos. Si tienes dudas sobre dónde enviar cierto contenido, cada canal posee una descripción que te puede orientar, o puedes preguntar a <@&716067179602247743>, o escribir el comando &canales.
+
+8. Sé cortés en los debates que se den. No hay opiniones incorrectas (aunque sí pueden ser ofensivas y dañinas) y existe el derecho a argumentar emocionalmente en temáticas que son sensibles para ti. Sin embargo, evita falacias y el enfrentamiento directo con otrxs miembros de la comunidad. Puedes cuestionar comportamientos que creas que vayan contra las reglas, pero evita involucrarte en discusiones que puedan terminar en agresiones, y deja que lxs admins se hagan cargo. Si tienes problemas personales con otros miembrxs (que no guarden relación con faltas a las reglas), mantén dichos conflictos en privado.
+
+9. Trata de dar respaldo a tus posturas utilizando fuentes independientes y/o confiables. Fuentes autopublicadas, con conflicto de interés o que utilizan información directamente incorrecta no cuentan como confiables.
+
+10. Si bien éste no es un servidor sobre kpop, y aceptamos personas que no tienen vínculos con éste, pedimos que respetes a dicha comunidad.
+
+11. <@800128022098477107> es el bot de la comunidad. Su propósito es facilitar el acceso al contenido que hemos realizado y hacer más entretenida e interactiva la estadía en el servidor. Para saber como usarlo, escribe &ayuda.

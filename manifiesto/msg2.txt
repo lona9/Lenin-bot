@@ -1,0 +1,18 @@
+1. Para tener acceso al servidor, debes poner tus datos en el canal <#716076107685822535>, con el formato:
+
+Nombre o sobrenombre
+Edad
+Pronombres preferidos
+Red social de referencia (@...)
+
+Estos datos solo los podrán ver <@&716067179602247743>, y es con fines prácticos y de seguridad.
+
+2. Respeta los pronombres preferidos de cada persona, pueden verse en las etiquetas de cada perfil.
+
+3. Como adultxs, debemos mantener a lxs menores del servidor a salvo, y no se permitirán instancias donde se exponga a unx menor a contenido para mayores sin una razón excepcional (por ejemplo, discusión de sucesos históricos). Si presencias una situación inapropiada ocurriendo, contacta a <@&716067179602247743> para que se encarguen de tomar las medidas necesarias de acuerdo al caso. 
+
+4. Dado el punto anterior, considerando el gran número de menores de edad en la comunidad, y buscando su comodidad, el límite etario superior para formar parte de la comunidad es de 35 años. 
+
+5. No aceptamos contenidos NSFW (not safe for work/no apto para el trabajo). Esto significa contenido sexual, gore, violencia, etcétera.
+
+6. El respeto es clave. No se aceptará transfobia, homofobia, racismo, machismo, capacitismo, o cualquier otro tipo de discurso de odio. El incumplimiento de esto significa la expulsión del servidor.

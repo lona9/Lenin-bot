@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Seulgi - Uncover'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='ITZY - WANNABE'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -80,7 +80,7 @@ async def on_raw_reaction_add(payload):
   ella = discord.utils.get(user.guild.roles, name="ella")
   elle = discord.utils.get(user.guild.roles, name="elle/ele")
   campanita = discord.utils.get(user.guild.roles, name="notificaciones")
-  
+
   if payload.channel_id == 801276868027482164:
     if payload.emoji.name == '🐛':
       await user.add_roles(menor)
@@ -153,8 +153,7 @@ async def actividad(ctx):
     text = f.read()
     await ctx.channel.send(text)
 
-#DM ROL DE NOTIFICACIONES
-
+#DM NOTIFICACIONES
 @bot.command()
 async def notificaciones(ctx):
   with open('/home/runner/lenin/roles/notificaciones-id.txt') as f:
@@ -349,7 +348,27 @@ async def on_message(message):
       await message.channel.send('Los comandos del bot de música deben ser enviados en el canal de <#731919940533223514>.')
 
   await bot.process_commands(message)
-  
+
+@bot.command()
+async def manifiesto(ctx):
+  await ctx.channel.send(file=discord.File('logo.PNG'))
+  with open('/home/runner/lenin/manifiesto/msg1.txt') as f:
+    msg1 = f.read()
+    await ctx.channel.send(msg1)
+  with open('/home/runner/lenin/manifiesto/msg2.txt') as f:
+    msg2 = f.read()
+    await ctx.channel.send(msg2)
+  with open('/home/runner/lenin/manifiesto/msg3.txt') as f:
+    msg3 = f.read()
+    await ctx.channel.send(msg3)
+  with open('/home/runner/lenin/manifiesto/msg4.txt') as f:
+    msg4 = f.read()
+    await ctx.channel.send(msg4)
+  with open('/home/runner/lenin/manifiesto/msg5.txt') as f:
+    msg5 = f.read()
+    await ctx.channel.send(msg5)
+
+
 keep_alive()
 
 bot.run(DISCORD_TOKEN)

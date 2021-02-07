@@ -17,6 +17,6 @@
 <#775731002890518588>: Canal para hablar de cualquier tema
 <#774806561465565194>: Canal para jugar EPIC RPG
 <#774730648774246431>: Canal para jugar Mudae
-<#716081709296255077>: Canal para hablar sobre kpop
+<#716081709296255077>: Canal para hablar sobre música
 <#731919940533223514>: Canal para comandos del reproductor de música
 <#775731090375311400>: Canal para hablar sobre juegos
