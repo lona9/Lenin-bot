@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='ITZY - WANNABE'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='LOONA 1/3 - Fairy Tale'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -367,7 +367,6 @@ async def manifiesto(ctx):
   with open('/home/runner/lenin/manifiesto/msg5.txt') as f:
     msg5 = f.read()
     await ctx.channel.send(msg5)
-
 
 keep_alive()
 
