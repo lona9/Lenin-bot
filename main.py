@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='LOONA 1/3 - Fairy Tale'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='ITZY - Not Shy'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -310,30 +310,30 @@ async def on_message(message):
 
   msg = message.content
 
-  if 'leamos' in msg.lower() or 'leido' in msg.lower() or 'lee' in msg.lower() or 'leiste' in msg.lower() or 'leyó' in msg.lower() or 'lei' in msg.lower() or 'leyendo' in msg.lower():
-    await message.channel.send('¿Alguien dijo leer? ¡Recuerda leer el texto de la próxima actividad!')
+  # if 'leamos' in msg.lower() or 'leido' in msg.lower() or 'lee' in msg.lower() or 'leiste' in msg.lower() or 'leyó' in msg.lower() or 'lei' in msg.lower() or 'leyendo' in msg.lower():
+  #   await message.channel.send('¿Alguien dijo leer? ¡Recuerda leer el texto de la próxima actividad!')
 
-  if 'trotsk' in msg.lower() or 'trosk' in msg.lower():
-    await message.channel.send(':pick:')
+  # if 'trotsk' in msg.lower() or 'trosk' in msg.lower():
+  #   await message.channel.send(':pick:')
 
-  if 'lenin' in msg.lower():
-    autolenin = ['¿Están hablando de mí?', '¿Me buscaban?', '¿Alguien dijo mi nombre?', '¡Sí, aquí estoy!', 'No es lindo hablar de alguien a sus espaldas.', '¿Yo qué?', '¿Qué pasa conmigo?', 'Ese es mi nombre, no lo gastes.']
-    await message.channel.send(random.choice(autolenin))
+  # if 'lenin' in msg.lower():
+  #   autolenin = ['¿Están hablando de mí?', '¿Me buscaban?', '¿Alguien dijo mi nombre?', '¡Sí, aquí estoy!', 'No es lindo hablar de alguien a sus espaldas.', '¿Yo qué?', '¿Qué pasa conmigo?', 'Ese es mi nombre, no lo gastes.']
+  #   await message.channel.send(random.choice(autolenin))
 
-  if ' pena' in msg.lower() or 'pena ' in msg.lower() or ' sad ' in msg.lower() or msg.endswith('sad') or 'sad' == msg.lower() or 'sad ' in msg.lower() or 'sadd' in msg.lower() or 'triste' in msg.lower() or 'llorar' in msg.lower() or 'tot' == msg.lower() or msg.endswith('tot'):
-      await message.channel.send('tkm no estés triste')
+  # if ' pena' in msg.lower() or 'pena ' in msg.lower() or ' sad ' in msg.lower() or msg.endswith('sad') or 'sad' == msg.lower() or 'sad ' in msg.lower() or 'sadd' in msg.lower() or 'triste' in msg.lower() or 'llorar' in msg.lower() or 'tot' == msg.lower() or msg.endswith('tot'):
+  #     await message.channel.send('tkm no estés triste')
 
-  if ' feliz' in msg.lower():
-      await message.channel.send('yo también bestie!')
+  # if ' feliz' in msg.lower():
+  #     await message.channel.send('yo también bestie!')
 
-  if 'cumpleaños' in msg.lower():
-      await message.channel.send('¿Quién está de cumpleaños? ¡Feliz cumpleaños, camarada! :partying_face:')
+  # if 'cumpleaños' in msg.lower():
+  #     await message.channel.send('¿Quién está de cumpleaños? ¡Feliz cumpleaños, camarada! :partying_face:')
 
-  if 'anticomunismo' in msg.lower() or 'anticomunista' in msg.lower():
-    await message.channel.send('<:yeojin2:716798849464795260>')
+  # if 'anticomunismo' in msg.lower() or 'anticomunista' in msg.lower():
+  #   await message.channel.send('<:yeojin2:716798849464795260>')
 
-  if 'blackpink' in msg.lower():
-    await message.channel.send('RS1 IS COMING')
+  # if 'blackpink' in msg.lower():
+  #   await message.channel.send('RS1 IS COMING')
 
   reprmusica = bot.get_channel(731919940533223514)
   secgen = bot.get_channel(716135897476628521)
@@ -348,25 +348,6 @@ async def on_message(message):
       await message.channel.send('Los comandos del bot de música deben ser enviados en el canal de <#731919940533223514>.')
 
   await bot.process_commands(message)
-
-@bot.command()
-async def manifiesto(ctx):
-  await ctx.channel.send(file=discord.File('logo.PNG'))
-  with open('/home/runner/lenin/manifiesto/msg1.txt') as f:
-    msg1 = f.read()
-    await ctx.channel.send(msg1)
-  with open('/home/runner/lenin/manifiesto/msg2.txt') as f:
-    msg2 = f.read()
-    await ctx.channel.send(msg2)
-  with open('/home/runner/lenin/manifiesto/msg3.txt') as f:
-    msg3 = f.read()
-    await ctx.channel.send(msg3)
-  with open('/home/runner/lenin/manifiesto/msg4.txt') as f:
-    msg4 = f.read()
-    await ctx.channel.send(msg4)
-  with open('/home/runner/lenin/manifiesto/msg5.txt') as f:
-    msg5 = f.read()
-    await ctx.channel.send(msg5)
 
 keep_alive()
 

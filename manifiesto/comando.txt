@@ -1,0 +1,18 @@
+@bot.command()
+async def manifiesto(ctx):
+  await ctx.channel.send(file=discord.File('logo.PNG'))
+  with open('/home/runner/lenin/manifiesto/msg1.txt') as f:
+    msg1 = f.read()
+    await ctx.channel.send(msg1)
+  with open('/home/runner/lenin/manifiesto/msg2.txt') as f:
+    msg2 = f.read()
+    await ctx.channel.send(msg2)
+  with open('/home/runner/lenin/manifiesto/msg3.txt') as f:
+    msg3 = f.read()
+    await ctx.channel.send(msg3)
+  with open('/home/runner/lenin/manifiesto/msg4.txt') as f:
+    msg4 = f.read()
+    await ctx.channel.send(msg4)
+  with open('/home/runner/lenin/manifiesto/msg5.txt') as f:
+    msg5 = f.read()
+    await ctx.channel.send(msg5)
