@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='ITZY - Not Shy'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Sunmi - pporappippam'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -152,6 +152,7 @@ async def actividad(ctx):
   with open('actividad.txt') as f:
     text = f.read()
     await ctx.channel.send(text)
+    await ctx.channel.send('Link al trailer del documental: https://www.youtube.com/watch?v=mc3MWENOHiY')
 
 #DM NOTIFICACIONES
 @bot.command()
@@ -162,7 +163,8 @@ async def notificaciones(ctx):
       with open('actividaddm.txt') as f:
         dm = f.read()
         user = await bot.fetch_user(i)
-        await user.send(dm) #agregar mensaje
+        await user.send(dm)
+        await user.send('Link al trailer del documental: https://www.youtube.com/watch?v=mc3MWENOHiY') #agregar mensaje
 
 #COMANDOS DE AYUDA
 @bot.command()
@@ -310,30 +312,30 @@ async def on_message(message):
 
   msg = message.content
 
-  # if 'leamos' in msg.lower() or 'leido' in msg.lower() or 'lee' in msg.lower() or 'leiste' in msg.lower() or 'leyó' in msg.lower() or 'lei' in msg.lower() or 'leyendo' in msg.lower():
-  #   await message.channel.send('¿Alguien dijo leer? ¡Recuerda leer el texto de la próxima actividad!')
+  if 'leamos' in msg.lower() or 'leido' in msg.lower() or 'lee' in msg.lower() or 'leiste' in msg.lower() or 'leyó' in msg.lower() or 'lei' in msg.lower() or 'leyendo' in msg.lower():
+    await message.channel.send('¿Alguien dijo leer? ¡Recuerda leer el texto de la próxima actividad!')
 
-  # if 'trotsk' in msg.lower() or 'trosk' in msg.lower():
-  #   await message.channel.send(':pick:')
+  if 'trotsk' in msg.lower() or 'trosk' in msg.lower():
+    await message.channel.send(':pick:')
 
-  # if 'lenin' in msg.lower():
-  #   autolenin = ['¿Están hablando de mí?', '¿Me buscaban?', '¿Alguien dijo mi nombre?', '¡Sí, aquí estoy!', 'No es lindo hablar de alguien a sus espaldas.', '¿Yo qué?', '¿Qué pasa conmigo?', 'Ese es mi nombre, no lo gastes.']
-  #   await message.channel.send(random.choice(autolenin))
+  if 'lenin' in msg.lower():
+    autolenin = ['¿Están hablando de mí?', '¿Me buscaban?', '¿Alguien dijo mi nombre?', '¡Sí, aquí estoy!', 'No es lindo hablar de alguien a sus espaldas.', '¿Yo qué?', '¿Qué pasa conmigo?', 'Ese es mi nombre, no lo gastes.']
+    await message.channel.send(random.choice(autolenin))
 
-  # if ' pena' in msg.lower() or 'pena ' in msg.lower() or ' sad ' in msg.lower() or msg.endswith('sad') or 'sad' == msg.lower() or 'sad ' in msg.lower() or 'sadd' in msg.lower() or 'triste' in msg.lower() or 'llorar' in msg.lower() or 'tot' == msg.lower() or msg.endswith('tot'):
-  #     await message.channel.send('tkm no estés triste')
+  if ' pena' in msg.lower() or 'pena ' in msg.lower() or ' sad ' in msg.lower() or msg.endswith('sad') or 'sad' == msg.lower() or 'sad ' in msg.lower() or 'sadd' in msg.lower() or 'triste' in msg.lower() or 'llorar' in msg.lower() or 'tot' == msg.lower() or msg.endswith('tot'):
+      await message.channel.send('tkm no estés triste')
 
-  # if ' feliz' in msg.lower():
-  #     await message.channel.send('yo también bestie!')
+  if ' feliz' in msg.lower():
+      await message.channel.send('yo también bestie!')
 
-  # if 'cumpleaños' in msg.lower():
-  #     await message.channel.send('¿Quién está de cumpleaños? ¡Feliz cumpleaños, camarada! :partying_face:')
+  if 'cumpleaños' in msg.lower():
+      await message.channel.send('¿Quién está de cumpleaños? ¡Feliz cumpleaños, camarada! :partying_face:')
 
-  # if 'anticomunismo' in msg.lower() or 'anticomunista' in msg.lower():
-  #   await message.channel.send('<:yeojin2:716798849464795260>')
+  if 'anticomunismo' in msg.lower() or 'anticomunista' in msg.lower():
+    await message.channel.send('<:yeojin2:716798849464795260>')
 
-  # if 'blackpink' in msg.lower():
-  #   await message.channel.send('RS1 IS COMING')
+  if 'blackpink' in msg.lower():
+    await message.channel.send('RS1 IS COMING')
 
   reprmusica = bot.get_channel(731919940533223514)
   secgen = bot.get_channel(716135897476628521)
