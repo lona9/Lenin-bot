@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Sunmi - pporappippam'))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Yuri - Into You'))
 
 #CANAL DE ROLES
 @bot.command()
@@ -154,6 +154,13 @@ async def actividad(ctx):
     await ctx.channel.send(text)
     await ctx.channel.send('Link al trailer del documental: https://www.youtube.com/watch?v=mc3MWENOHiY')
 
+@bot.command()
+async def actividad2(ctx):
+  with open('actividad2.txt') as f:
+    text = f.read()
+    await ctx.channel.send(text)
+    await ctx.channel.send(file=discord.File('docus.png'))
+
 #DM NOTIFICACIONES
 @bot.command()
 async def notificaciones(ctx):
@@ -164,7 +171,18 @@ async def notificaciones(ctx):
         dm = f.read()
         user = await bot.fetch_user(i)
         await user.send(dm)
-        await user.send('Link al trailer del documental: https://www.youtube.com/watch?v=mc3MWENOHiY') #agregar mensaje
+        await user.send('Link al trailer del documental: https://www.youtube.com/watch?v=mc3MWENOHiY')
+
+@bot.command()
+async def notificaciones2(ctx):
+  with open('/home/runner/lenin/roles/notificaciones-id.txt') as f:
+    users = f.read().split(', ')
+    for i in users:
+      with open('actividaddm2.txt') as f:
+        dm = f.read()
+        user = await bot.fetch_user(i)
+        await user.send(dm)
+        await user.send(file=discord.File('docus.png'))
 
 #COMANDOS DE AYUDA
 @bot.command()
