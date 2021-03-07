@@ -147,40 +147,25 @@ async def opbot(ctx):
       await msg.add_reaction(i)
 
 #ACTIVIDADES
-# @bot.command()
-# async def actividad(ctx):
-#   with open('actividad.txt') as f:
-#     text = f.read()
-#     await ctx.channel.send(text)
-
 @bot.command()
-async def actividad2(ctx):
-  with open('actividad2.txt') as f:
+async def actividad(ctx):
+  with open('actividad.txt') as f:
     text = f.read()
     await ctx.channel.send(text)
-    await ctx.channel.send(file=discord.File('docus.png'))
+    await ctx.channel.send(file=discord.File('afichecolombia.png'))
+
 
 #DM NOTIFICACIONES
-# @bot.command()
-# async def notificaciones(ctx):
-#   with open('/home/runner/lenin/roles/notificaciones-id.txt') as f:
-#     users = f.read().split(', ')
-#     for i in users:
-#       with open('actividaddm.txt') as f:
-#         dm = f.read()
-#         user = await bot.fetch_user(i)
-#         await user.send(dm)
-
 @bot.command()
-async def notificaciones2(ctx):
+async def notificaciones(ctx):
   with open('/home/runner/lenin/roles/notificaciones-id.txt') as f:
     users = f.read().split(', ')
     for i in users:
-      with open('actividaddm2.txt') as f:
+      with open('actividaddm.txt') as f:
         dm = f.read()
         user = await bot.fetch_user(i)
         await user.send(dm)
-        await user.send(file=discord.File('docus.png'))
+        await ctx.channel.send(file=discord.File('afichecolombia.png'))
 
 #COMANDOS DE AYUDA
 @bot.command()
