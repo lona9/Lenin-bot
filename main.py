@@ -165,7 +165,7 @@ async def notificaciones(ctx):
         dm = f.read()
         user = await bot.fetch_user(i)
         await user.send(dm)
-        await ctx.channel.send(file=discord.File('afichecolombia.png'))
+        await user.send(file=discord.File('afichecolombia.png'))
 
 #COMANDOS DE AYUDA
 @bot.command()
