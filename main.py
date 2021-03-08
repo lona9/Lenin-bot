@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="SHINee - Don't Call Me"))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Akimoto Sayaka - Mushi no Ballad"))
 
 #CANAL DE ROLES
 @bot.command()
@@ -145,6 +145,7 @@ async def opbot(ctx):
     reactions = ['🎉', '😐', '😭', '🗿']
     for i in reactions:
       await msg.add_reaction(i)
+
 
 #ACTIVIDADES
 @bot.command()
