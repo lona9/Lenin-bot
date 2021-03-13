@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="&")
 @bot.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(bot))
-  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Akimoto Sayaka - Mushi no Ballad"))
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Rosé - On The Ground"))
 
 #CANAL DE ROLES
 @bot.command()
